@@ -85,6 +85,10 @@ function canvasClear() {
     }
 }
 
+function menuDelete(event){
+    event.preventDefault();
+}
+
 
 if (canvas) {
     canvas.addEventListener("mouseout", stopPainting);
@@ -92,6 +96,7 @@ if (canvas) {
     canvas.addEventListener("mousemove", painting);
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("click", paintCanvas);
+    canvas.addEventListener("contextmenu",menuDelete);
 }
 
 if (paint) {
